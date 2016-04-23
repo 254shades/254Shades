@@ -72,8 +72,6 @@ namespace _254ShadesV2
                 options.AutomaticAuthenticate = true;
             });
 
-            app.UseClaimsTransformation(options => { });
-
             app.UseOpenIdConnectAuthentication(options =>
             {
                 options.AutomaticChallenge = true;
