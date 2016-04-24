@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet5-_254ShadesV2-b773d9ae-60ed-4f48-878c-41696b849161",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -16,13 +16,14 @@
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.FileProviderExtensions" : "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "WindowsAzure.Storage": "7.0.1-preview"
   },
 
   "commands": {
@@ -30,7 +31,14 @@
   },
 
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {
+      "dependencies": {
+        "Microsoft.Data.Edm": "5.7.0",
+        "Microsoft.Data.OData": "5.7.0",
+        "Microsoft.Data.Services.Client": "5.7.0",
+        "System.Spatial": "5.7.0"
+      }
+    },
     "dnxcore50": { }
   },
 

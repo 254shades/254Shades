@@ -9,6 +9,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using _254ShadesV2.Models;
 
 namespace _254ShadesV2
 {
@@ -41,6 +42,8 @@ namespace _254ShadesV2
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+            services.AddTransient<IShadeService, ShadeService>().Configure<ShadeServiceConfiguration>(Configuration.GetSection("MicrosoftAzureStorage"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
